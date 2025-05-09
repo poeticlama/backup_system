@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# To be fixed later 
+
 SOURCE_DIR="~"  # Just backup home directory
 BACKUP_DIR="backups" # Path to save backup
 
