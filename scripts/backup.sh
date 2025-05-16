@@ -26,7 +26,7 @@ for SRC in "${SOURCE_DIRS[@]}"; do
 done
 
 if [[ ! -z "$DB_LIST" ]]; then
-	../backup_db.sh "$TARGET_DIT" "$DATE"
+	../backup_db.sh "$TARGET_DIR" "$DATE"
 else
 	echo "No DB listed"
 fi
