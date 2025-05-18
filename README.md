@@ -119,9 +119,8 @@ crontab -e
 3. Verify archives in `backups/` and SQL dumps in `backups/db/`.  
 
 ### Rotation Test:
-1. Create more than `BACKUPS_NUM` backups.  
-2. Run `rotate_backups.sh`.  
-3. Confirm only `BACKUPS_NUM` backups remain.  
+1. Create more than `BACKUPS_NUM` backups using `backup.sh`.  
+2. Confirm only `BACKUPS_NUM` backups remain.  
 
 ### Restore Test:
 1. Use `restore.sh` on a test directory.  
