@@ -27,7 +27,7 @@ if [[ -d "$DB_BACKUP_DIR" ]]; then
     [[ -e "$SQL_FILE" ]] || continue
     DB_NAME=$(basename "$SQL_FILE" | sed -E 's/_.*\.sql$//')
     echo "Restoring database: $DB_NAME from $SQL_FILE"
-    psql -U postgres "$DB_NAME" < "$SQL_FILE"
+    psql -U postgres "$DB_NAME" <"$SQL_FILE"
   done
 else
   echo "No database backups found in $DB_BACKUP_DIR"
