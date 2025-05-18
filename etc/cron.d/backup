@@ -1,3 +1,0 @@
-30 2 * * * /bin/bash /scripts/backup.sh >> /logs/backup.log 2>&1
-
-0 3 * * * /bin/bash /scripts/monitor_backups.sh
