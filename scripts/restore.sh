@@ -32,7 +32,7 @@ for SRC in "${SOURCE_DIRS[@]}"; do
   if [[ -f "$TAR_FILE" ]]; then
     echo "Restoring files for $NAME from $TAR_FILE to $SRC"
     mkdir -p "$SRC"
-    tar -xzf "$TAR_FILE" -C "$(dirname "$SRC")" --strip-components=1
+    tar -xzf "$TAR_FILE" -C "$(dirname "$SRC")" --strip-components=3
     echo "Files restored successfully for $NAME"
   else
     echo "No backup file found for $NAME"
@@ -48,7 +48,6 @@ if [[ -d "$DB_BACKUP_DIR" && ! -z "$DB_LIST" ]]; then
 
     if [[ -f "$DB_FILE" ]]; then
       echo "Restoring database $DB from $DB_FILE"
-      # Используем sudo -u postgres для peer-аутентификации
       sudo -u postgres psql -c "DROP DATABASE IF EXISTS $DB;"
       sudo -u postgres psql -c "CREATE DATABASE $DB;"
       sudo -u postgres psql "$DB" <"$DB_FILE"
