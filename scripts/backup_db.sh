@@ -23,7 +23,7 @@ fi
 for DB in "${DB_LIST[@]}"; do
   OUTPUT_FILE="$DB_BACKUP_DIR/${DB}_${DATE}.sql"
   echo "Backing up DB: $DB -> $OUTPUT_FILE"
-  pg_dump -U "$DB_USER" "$DB" > "$OUTPUT_FILE"
+  sudo -u postgres pg_dump "$DB" >"$OUTPUT_FILE"
   if [[ $? -ne 0 ]]; then
     echo "Failed to backup database: $DB"
   else
