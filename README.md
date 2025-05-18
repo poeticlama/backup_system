@@ -53,7 +53,7 @@ Developed using Bash scripting, Cron scheduling, and PostgreSQL tools.
 
 ## Configuration
 
-### Config File (`backup.conf`)
+### Config File
 Located in `config/backup.conf`. Configure the following variables:  
 ```bash
 SOURCE_DIRS=( "/home/${USER}/backup_system/test_project/" )  # Directories to back up
@@ -132,5 +132,4 @@ crontab -e
 ## Resources
 - [PostgreSQL Backup Tools](https://selected.ru/blog/postgresql-backup-tools/)  
 - [Bash Backup Example](https://github.com/AnonStar/home_backup)  
-- [Cron Scheduling Guide](https://www.man7.org/linux/man-pages/man5/crontab.5.html)  
-```
+- [Cron Scheduling Guide](https://www.man7.org/linux/man-pages/man5/crontab.5.html) 
